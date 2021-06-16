@@ -2,11 +2,12 @@ package org.example.controller;
 
 import org.example.entity.Employee;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Component
+@Controller
 @ResponseBody
 @RequestMapping(value = "Employees")
 public class EmployeeController {
