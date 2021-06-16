@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@ResponseBody
+@RestController
 @RequestMapping(value = "Employees")
 public class EmployeeController {
 
