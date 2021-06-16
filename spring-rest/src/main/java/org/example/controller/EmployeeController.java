@@ -7,37 +7,34 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Component
+@ResponseBody
+@RequestMapping(value = "Employees")
 public class EmployeeController {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/Employees")
-    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET)
     public List<Employee> findall(){
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.GET,value = "/Employees{id}")
-    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET,value = "{id}")
     public Employee findone(@PathVariable("id") String id)
     {
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/Employees")
-    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST)
     public Employee create(@RequestBody Employee employee)
     {
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/Employees{id}")
-    @ResponseBody
+    @RequestMapping(method = RequestMethod.PUT, value = "{id}")
     public Employee update(@PathVariable("id") String id, @RequestBody Employee employee)
     {
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/Employees{id}")
-    @ResponseBody
+    @RequestMapping(method = RequestMethod.DELETE, value = "{id}")
     public void delete(@PathVariable("id") String id)
     {
     }
