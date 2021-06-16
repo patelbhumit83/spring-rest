@@ -2,10 +2,7 @@ package org.example.controller;
 
 import org.example.entity.Employee;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,29 +10,34 @@ import java.util.List;
 public class EmployeeController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/Employees")
+    @ResponseBody
     public List<Employee> findall(){
         return null;
     }
 
     @RequestMapping(method = RequestMethod.GET,value = "/Employees{id}")
+    @ResponseBody
     public Employee findone(@PathVariable("id") String id)
     {
         return null;
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/Employees")
+    @ResponseBody
     public Employee create(@RequestBody Employee employee)
     {
         return null;
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/Employees{id}")
+    @ResponseBody
     public Employee update(@PathVariable("id") String id, @RequestBody Employee employee)
     {
         return null;
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/Employees{id}")
+    @ResponseBody
     public void delete(@PathVariable("id") String id)
     {
     }
