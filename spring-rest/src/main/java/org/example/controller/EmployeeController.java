@@ -2,6 +2,7 @@ package org.example.controller;
 
 import org.example.entity.Employee;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -10,32 +11,31 @@ import java.util.List;
 @Component
 public class EmployeeController {
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, value = "/Employees")
     public List<Employee> findall(){
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public Employee findone(String id)
+    @RequestMapping(method = RequestMethod.GET,value = "/Employees{id}")
+    public Employee findone(@PathVariable("id") String id)
     {
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST, value = "/Employees")
     public Employee create(Employee employee)
     {
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.PUT)
-    public Employee update(String id, Employee employee)
+    @RequestMapping(method = RequestMethod.PUT, value = "/Employees{id}")
+    public Employee update(@PathVariable("id") String id, Employee employee)
     {
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.DELETE)
-    public void delete(String id)
+    @RequestMapping(method = RequestMethod.DELETE, value = "/Employees{id}")
+    public void delete(@PathVariable("id") String id)
     {
-
     }
 }
