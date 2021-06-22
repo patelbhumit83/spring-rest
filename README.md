@@ -1,1 +1,1 @@
-# spring-rest
+# spring-rest with MVC
