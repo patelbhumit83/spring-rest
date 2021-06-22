@@ -1,16 +1,18 @@
 package org.example.entity;
 
-import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
-@Component
 public class Employee {
 
     private String id;
     private String firstName;
     private String lastName;
     private String email;
+
+    public Employee(){
+        this.id = UUID.randomUUID().toString();
+    }
 
 
     public Employee(String firstName, String lastName, String email){

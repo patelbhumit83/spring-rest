@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "Employees")
+@RequestMapping(value = "employees")
 public class EmployeeController {
 
     @RequestMapping(method = RequestMethod.GET)
